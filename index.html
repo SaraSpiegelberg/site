@@ -5,6 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sara Spiegelberg | Portfólio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background: #fff5f7;
+      }
+
+      .hero {
+        min-height: 100vh;
+        padding: 20px 10%;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(45deg, #ff006e 0%, #ff85a1 100%);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 15px 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        height: 60px;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 30px;
+      }
+
+      nav ul li {
+        list-style: none;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #ff006e;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff85a1;
+      }
+
+      .detail {
+        margin-top: 15%;
+        max-width: 50%;
+        color: white;
+      }
+
+      .detail h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+      }
+
+      .detail h1 span {
+        color: #ffecf1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .detail p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background: white;
+        color: #ff006e;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .images {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        height: 80%;
+      }
+
+      .girl {
+        height: 100%;
+        z-index: 2;
+        position: relative;
+      }
+
+      .shape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 120%;
+        opacity: 0.1;
+        z-index: 1;
+      }
+
+      @media (max-width: 1200px) {
+        .detail {
+          max-width: 70%;
+        }
+        
+        .images {
+          right: 5%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 20px 5%;
+        }
+        
+        .detail {
+          max-width: 100%;
+          margin-top: 30%;
+          text-align: center;
+        }
+        
+        .images {
+          display: none;
+        }
+        
+        nav ul {
+          gap: 15px;
+        }
+        
+        .detail h1 {
+          font-size: 2.5em;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="hero">

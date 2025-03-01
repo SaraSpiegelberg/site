@@ -159,6 +159,55 @@
     }
 
     /* ====================
+       SEÇÃO DE TECNOLOGIAS
+    ==================== */
+    .technologies {
+      padding: 40px;
+      text-align: center;
+    }
+    .technologies h2 {
+      margin-bottom: 20px;
+    }
+    .tech-category {
+      margin-bottom: 40px;
+    }
+    .tech-category h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #f93deb;
+    }
+    .tech-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .tech-box {
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .tech-box img {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .tech-box p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* ====================
+       SEÇÕES DE CONTEÚDO
+    ==================== */
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* ====================
        RODAPÉ
     ==================== */
     footer {
@@ -199,7 +248,6 @@
 
   <!-- Cabeçalho -->
   <header>
-    <!-- Alteramos o logo para o nome -->
     <div class="logo">Sara Spiegelberg</div>
     <nav>
       <ul>
@@ -207,7 +255,6 @@
         <li><a href="#">Sobre</a></li>
       </ul>
     </nav>
-    <!-- Botões de navegação (Projetos e Games) -->
     <div class="header-buttons">
       <a href="#projetos" class="btn-header">Projetos</a>
       <a href="#games" class="btn-header">Games</a>
@@ -216,15 +263,12 @@
 
   <!-- Seção Principal (Hero) -->
   <section class="hero">
-    <!-- Formas geométricas decorativas -->
     <div class="shape1"></div>
     <div class="shape2"></div>
     <div class="shape3"></div>
 
-    <!-- Título e descrição adaptados para portfólio -->
     <h1>Olá, eu sou <span>Sara Spiegelberg</span></h1>
     <p>Desenvolvedora de games e aplicativos. Bem-vinda ao meu portfólio!</p>
-    <!-- Dois botões para acessar as seções de Projetos e Games -->
     <div class="cta-buttons">
       <button class="btn-cta" onclick="location.href='#projetos'">Meus Projetos</button>
       <button class="btn-cta" onclick="location.href='#games'">Games</button>
@@ -232,17 +276,80 @@
   </section>
 
   <!-- Seção de Projetos -->
-  <section id="projetos" style="padding: 40px; text-align: center;">
+  <section id="projetos">
     <h2>Projetos</h2>
     <p>Aqui você encontrará meus projetos de desenvolvimento de aplicativos e outras criações.</p>
     <!-- Conteúdo dos projetos -->
   </section>
 
   <!-- Seção de Games -->
-  <section id="games" style="padding: 40px; text-align: center;">
+  <section id="games">
     <h2>Games</h2>
     <p>Confira alguns dos games que desenvolvi e meus experimentos nessa área.</p>
     <!-- Conteúdo dos games -->
+  </section>
+
+  <!-- Seção de Tecnologias -->
+  <section id="tecnologias" class="technologies">
+    <h2>Tecnologias</h2>
+
+    <!-- Área de Programação -->
+    <div class="tech-category">
+      <h3>Programação</h3>
+      <div class="tech-container">
+        <div class="tech-box">
+          <img src="images/flutter.png" alt="Flutter">
+          <p>Flutter</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/dart.png" alt="Dart">
+          <p>Dart</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/php.png" alt="PHP">
+          <p>PHP</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/html.png" alt="HTML">
+          <p>HTML</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/css.png" alt="CSS">
+          <p>CSS</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/js.png" alt="JS">
+          <p>JS</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/vscode.png" alt="VSCode">
+          <p>VSCode</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área de Games -->
+    <div class="tech-category">
+      <h3>Games</h3>
+      <div class="tech-container">
+        <div class="tech-box">
+          <img src="images/godot4.png" alt="Godot 4">
+          <p>Godot 4</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/construct.png" alt="Construct">
+          <p>Construct</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/aseprite.png" alt="Aseprite">
+          <p>Aseprite</p>
+        </div>
+        <div class="tech-box">
+          <img src="images/photoshop.png" alt="Photoshop">
+          <p>Photoshop</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Rodapé -->

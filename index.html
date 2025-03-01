@@ -1,209 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sara Spiegelberg | Portfólio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      body {
-        background: #fff5f7;
-      }
-
-      .hero {
-        min-height: 100vh;
-        padding: 20px 10%;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(45deg, #ff006e 0%, #ff85a1 100%);
-      }
-
-      nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 0;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 15px;
-        padding: 15px 30px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .logo {
-        height: 60px;
-      }
-
-      nav ul {
-        display: flex;
-        gap: 30px;
-      }
-
-      nav ul li {
-        list-style: none;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: #ff006e;
-        font-weight: 500;
-        transition: 0.3s;
-      }
-
-      nav ul li a:hover {
-        color: #ff85a1;
-      }
-
-      .detail {
-        margin-top: 15%;
-        max-width: 50%;
-        color: white;
-      }
-
-      .detail h1 {
-        font-size: 3.5em;
-        margin-bottom: 20px;
-      }
-
-      .detail h1 span {
-        color: #ffecf1;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .detail p {
-        font-size: 1.1em;
-        line-height: 1.6;
-        margin-bottom: 30px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 15px 40px;
-        background: white;
-        color: #ff006e;
-        text-decoration: none;
-        border-radius: 30px;
-        font-weight: 600;
-        transition: 0.3s;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      }
-
-      .images {
-        position: absolute;
-        bottom: 0;
-        right: 10%;
-        height: 80%;
-      }
-
-      .girl {
-        height: 100%;
-        z-index: 2;
-        position: relative;
-      }
-
-      .shape {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 120%;
-        opacity: 0.1;
-        z-index: 1;
-      }
-
-      @media (max-width: 1200px) {
-        .detail {
-          max-width: 70%;
-        }
-        
-        .images {
-          right: 5%;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero {
-          padding: 20px 5%;
-        }
-        
-        .detail {
-          max-width: 100%;
-          margin-top: 30%;
-          text-align: center;
-        }
-        
-        .images {
-          display: none;
-        }
-        
-        nav ul {
-          gap: 15px;
-        }
-        
-        .detail h1 {
-          font-size: 2.5em;
-        }
-      }
-    </style>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Spiegelberg | Designer & Desenvolvedora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
     <header class="hero">
-      <nav>
-        <img
-          src="images/LOGO_Camada 2_LOGO.svg"
-          alt="Logo Sara Spiegelberg"
-          class="logo"
-        />
-        <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Portfólio</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
+        <nav>
+            <img src="images/LOGO_Camada 2_LOGO.svg" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
 
-      <div class="detail">
-        <h1>Olá, eu sou a <span>Sara Spiegelberg</span></h1>
-        <p>
-          Este é meu site pessoal para apresentar meu portfólio.<br />
-          Mais detalhes sobre mim podem ser encontrados no meu currículo.
-        </p>
-        <a href="#" class="btn">Baixar Currículo</a>
-      </div>
-
-      <div class="images">
-        <img
-          src="images/bitmap_Camada 1.svg"
-          alt="Decoração do site"
-          class="shape"
-        />
-        <img
-          src="images/IMG_20230710_160316_848-removebg.png"
-          alt="Sara Spiegelberg"
-          class="girl"
-        />
-      </div>
+        <div class="hero-content">
+            <div class="detail">
+                <h1>Transformando ideias em <span>experiências digitais</span></h1>
+                <p>Designer UI/UX & Desenvolvedora Front-End com foco em soluções criativas</p>
+                <a href="#contato" class="btn">Comece seu projeto</a>
+            </div>
+            <div class="images">
+                <img src="images/design-girl.png" alt="Ilustração" class="girl">
+            </div>
+        </div>
     </header>
 
-    <main>
-      <!-- Seções adicionais do portfólio -->
-    </main>
+    <!-- Serviços -->
+    <section class="servicos" id="servicos">
+        <div class="section-title">
+            <h2>Meus <span>Serviços</span></h2>
+        </div>
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <i class="fas fa-palette"></i>
+                <h3>UI/UX Design</h3>
+                <p>Criação de interfaces intuitivas e experiências de usuário memoráveis</p>
+            </div>
+            <div class="servico-card">
+                <i class="fas fa-code"></i>
+                <h3>Desenvolvimento Web</h3>
+                <p>Sites responsivos e sistemas web com as melhores tecnologias</p>
+            </div>
+            <div class="servico-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile First</h3>
+                <p>Desenvolvimento focado na melhor experiência para dispositivos móveis</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Portfólio -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-title">
+            <h2>Últimos <span>Projetos</span></h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="projeto-card">
+                <img src="images/projeto1.jpg" alt="Projeto 1">
+                <div class="projeto-info">
+                    <h4>E-commerce Fashion</h4>
+                    <p>Design & Desenvolvimento</p>
+                </div>
+            </div>
+            <div class="projeto-card">
+                <img src="images/projeto2.jpg" alt="Projeto 2">
+                <div class="projeto-info">
+                    <h4>Plataforma SaaS</h4>
+                    <p>UI/UX Design</p>
+                </div>
+            </div>
+            <div class="projeto-card">
+                <img src="images/projeto3.jpg" alt="Projeto 3">
+                <div class="projeto-info">
+                    <h4>Aplicativo Mobile</h4>
+                    <p>Desenvolvimento Full Stack</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato" id="contato">
+        <div class="section-title">
+            <h2>Vamos <span>Conversar</span></h2>
+        </div>
+        <div class="contato-content">
+            <form class="contato-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Seu e-mail">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Sua mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <!-- Informações do rodapé -->
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2024 Sara Spiegelberg. Todos os direitos reservados</p>
+        </div>
     </footer>
-  </body>
+</body>
 </html>

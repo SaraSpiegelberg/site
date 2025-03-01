@@ -1,136 +1,282 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Spiegelberg | Designer & Desenvolvedora</title>
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Seu arquivo de estilos -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Landing Page Template - Game Streamer</title>
+  <!-- Fonte e Ícones (Font Awesome) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* ==================== 
+       RESET BÁSICO
+    ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    html, body {
+      height: 100%;
+      background: #1B0D2F; /* Fundo roxo escuro */
+      color: #ffffff;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+    
+    /* ====================
+       CABEÇALHO E NAVEGAÇÃO
+    ==================== */
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+    }
+    /* Logo temporária (texto) */
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f93deb; /* Rosa neon */
+    }
+    /* Navegação */
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f93deb;
+    }
+    /* Botões do cabeçalho (Sign In, Balance) */
+    .header-buttons {
+      display: flex;
+      gap: 15px;
+    }
+    .btn-header {
+      border: 1px solid #f93deb;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .btn-header:hover {
+      background: #f93deb;
+      color: #1B0D2F;
+    }
+
+    /* ====================
+       SEÇÃO PRINCIPAL (HERO)
+    ==================== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+      color: #f3f3f3;
+    }
+    .hero h1 span {
+      color: #f93deb; /* Destaque rosa neon */
+    }
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #cfcfcf;
+    }
+    .btn-try-now {
+      background: #f93deb;
+      color: #1B0D2F;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn-try-now:hover {
+      background: #ff5af0;
+    }
+
+    /* Formas geométricas de fundo (decorativas) */
+    .shape1, .shape2, .shape3 {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      z-index: 1;
+    }
+    .shape1 {
+      width: 150px;
+      height: 150px;
+      background: #f93deb;
+      top: 10%;
+      left: 5%;
+    }
+    .shape2 {
+      width: 200px;
+      height: 200px;
+      background: #f93deb;
+      bottom: 20%;
+      right: 10%;
+    }
+    .shape3 {
+      width: 100px;
+      height: 100px;
+      background: #f93deb;
+      bottom: 5%;
+      left: 30%;
+    }
+
+    /* ====================
+       SEÇÃO DE ESTATÍSTICAS
+    ==================== */
+    .stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin: 30px 0;
+    }
+    .stat-box {
+      text-align: center;
+    }
+    .stat-box h3 {
+      font-size: 1.8rem;
+      color: #f93deb;
+      margin-bottom: 5px;
+      font-weight: 900;
+    }
+    .stat-box p {
+      font-size: 0.9rem;
+      color: #cfcfcf;
+    }
+
+    /* ====================
+       RODAPÉ
+    ==================== */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #1B0D2F;
+      border-top: 1px solid #333;
+    }
+    .social-links {
+      margin-bottom: 10px;
+    }
+    .social-links a {
+      margin: 0 10px;
+      font-size: 1.2rem;
+      color: #f93deb;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #ff66f2;
+    }
+    footer p {
+      font-size: 0.85rem;
+      color: #cfcfcf;
+    }
+
+    /* RESPONSIVIDADE SIMPLES */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 0.9rem;
+      }
+      .stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header com a navegação -->
-    <header class="hero">
-        <nav>
-            <!-- Logo da página -->
-            <img src="images/LOGO_Camada 2_LOGO.svg" alt="Logo" class="logo">
-            <!-- Menu de navegação -->
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
 
-        <div class="hero-content">
-            <div class="detail">
-                <h1>Transformando ideias em <span>experiências digitais</span></h1>
-                <p>Designer UI/UX & Desenvolvedora Front-End com foco em soluções criativas</p>
-                <a href="#contato" class="btn">Comece seu projeto</a>
-            </div>
-            <div class="images">
-                <img src="images/design-girl.png" alt="Ilustração" class="girl">
-            </div>
-        </div>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">GamzStream</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Streamer</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="header-buttons">
+      <a href="#" class="btn-header">Sign In</a>
+      <a href="#" class="btn-header">Balance</a>
+    </div>
+  </header>
 
-    <!-- Seção "Sobre" adicionada para que o link do menu funcione -->
-    <section class="sobre" id="sobre">
-        <div class="section-title">
-            <h2>Sobre Mim</h2>
-        </div>
-        <div class="sobre-content">
-            <p>Bem-vindo ao meu portfólio! Sou designer e desenvolvedora apaixonada por transformar ideias em experiências digitais marcantes. Aqui você encontrará um pouco sobre minha trajetória, meus valores e como posso ajudar a dar vida ao seu projeto.</p>
-        </div>
-    </section>
+  <!-- Seção Principal (Hero) -->
+  <section class="hero">
+    <!-- Formas geométricas decorativas -->
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+    <div class="shape3"></div>
 
-    <!-- Seção de Serviços -->
-    <section class="servicos" id="servicos">
-        <div class="section-title">
-            <h2>Meus <span>Serviços</span></h2>
-        </div>
-        <div class="servicos-grid">
-            <div class="servico-card">
-                <i class="fas fa-palette"></i>
-                <h3>UI/UX Design</h3>
-                <p>Criação de interfaces intuitivas e experiências de usuário memoráveis</p>
-            </div>
-            <div class="servico-card">
-                <i class="fas fa-code"></i>
-                <h3>Desenvolvimento Web</h3>
-                <p>Sites responsivos e sistemas web com as melhores tecnologias</p>
-            </div>
-            <div class="servico-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile First</h3>
-                <p>Desenvolvimento focado na melhor experiência para dispositivos móveis</p>
-            </div>
-        </div>
-    </section>
+    <h1>GAME <span>STREAMING</span></h1>
+    <p>We have the Best Service for Streamers</p>
+    <button class="btn-try-now">Try Now</button>
+  </section>
 
-    <!-- Seção de Portfólio -->
-    <section class="portfolio" id="portfolio">
-        <div class="section-title">
-            <h2>Últimos <span>Projetos</span></h2>
-        </div>
-        <div class="portfolio-grid">
-            <div class="projeto-card">
-                <img src="images/projeto1.jpg" alt="Projeto 1">
-                <div class="projeto-info">
-                    <h4>E-commerce Fashion</h4>
-                    <p>Design & Desenvolvimento</p>
-                </div>
-            </div>
-            <div class="projeto-card">
-                <img src="images/projeto2.jpg" alt="Projeto 2">
-                <div class="projeto-info">
-                    <h4>Plataforma SaaS</h4>
-                    <p>UI/UX Design</p>
-                </div>
-            </div>
-            <div class="projeto-card">
-                <img src="images/projeto3.jpg" alt="Projeto 3">
-                <div class="projeto-info">
-                    <h4>Aplicativo Mobile</h4>
-                    <p>Desenvolvimento Full Stack</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Seção de Estatísticas -->
+  <section class="stats">
+    <div class="stat-box">
+      <h3>10K+</h3>
+      <p>Members</p>
+    </div>
+    <div class="stat-box">
+      <h3>50+</h3>
+      <p>Groups</p>
+    </div>
+    <div class="stat-box">
+      <h3>100+</h3>
+      <p>Servers</p>
+    </div>
+    <div class="stat-box">
+      <h3>20K</h3>
+      <p>Positive Feedback</p>
+    </div>
+  </section>
 
-    <!-- Seção de Contato -->
-    <section class="contato" id="contato">
-        <div class="section-title">
-            <h2>Vamos <span>Conversar</span></h2>
-        </div>
-        <div class="contato-content">
-            <form class="contato-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Seu nome">
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Seu e-mail">
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Sua mensagem"></textarea>
-                </div>
-                <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
+  <!-- Rodapé -->
+  <footer>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2025 GamzStream. Todos os direitos reservados.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-            <p>&copy; 2024 Sara Spiegelberg. Todos os direitos reservados</p>
-        </div>
-    </footer>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Landing Page Template - Game Streamer</title>
+  <title>Portfólio - Sara Spiegelberg</title>
   <!-- Fonte e Ícones (Font Awesome) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
       justify-content: space-between;
       background: transparent;
     }
-    /* Logo temporária (texto) */
+    /* Logo com o nome */
     .logo {
       font-size: 1.5rem;
       font-weight: 700;
@@ -63,7 +63,7 @@
     nav a:hover {
       color: #f93deb;
     }
-    /* Botões do cabeçalho (Sign In, Balance) */
+    /* Botões do cabeçalho (ex: Projetos, Games) */
     .header-buttons {
       display: flex;
       gap: 15px;
@@ -93,9 +93,10 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
+      padding: 0 20px;
     }
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 900;
       margin-bottom: 10px;
       color: #f3f3f3;
@@ -104,11 +105,16 @@
       color: #f93deb; /* Destaque rosa neon */
     }
     .hero p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin-bottom: 20px;
       color: #cfcfcf;
     }
-    .btn-try-now {
+    /* Botões de chamada para ação (Projetos e Games) */
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+    }
+    .btn-cta {
       background: #f93deb;
       color: #1B0D2F;
       border: none;
@@ -119,7 +125,7 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    .btn-try-now:hover {
+    .btn-cta:hover {
       background: #ff5af0;
     }
 
@@ -221,18 +227,18 @@
 
   <!-- Cabeçalho -->
   <header>
-    <div class="logo">GamzStream</div>
+    <!-- Alteramos o logo para o nome -->
+    <div class="logo">Sara Spiegelberg</div>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Streamer</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Sobre</a></li>
       </ul>
     </nav>
+    <!-- Botões de navegação (Projetos e Games) -->
     <div class="header-buttons">
-      <a href="#" class="btn-header">Sign In</a>
-      <a href="#" class="btn-header">Balance</a>
+      <a href="#projetos" class="btn-header">Projetos</a>
+      <a href="#games" class="btn-header">Games</a>
     </div>
   </header>
 
@@ -243,29 +249,47 @@
     <div class="shape2"></div>
     <div class="shape3"></div>
 
-    <h1>GAME <span>STREAMING</span></h1>
-    <p>We have the Best Service for Streamers</p>
-    <button class="btn-try-now">Try Now</button>
+    <!-- Título e descrição adaptados para portfólio -->
+    <h1>Olá, eu sou <span>Sara Spiegelberg</span></h1>
+    <p>Desenvolvedora de games e aplicativos. Bem-vinda ao meu portfólio!</p>
+    <!-- Dois botões para acessar as seções de Projetos e Games -->
+    <div class="cta-buttons">
+      <button class="btn-cta" onclick="location.href='#projetos'">Meus Projetos</button>
+      <button class="btn-cta" onclick="location.href='#games'">Games</button>
+    </div>
   </section>
 
-  <!-- Seção de Estatísticas -->
+  <!-- Seção de Estatísticas (opcional, pode ser adaptada conforme os dados do portfólio) -->
   <section class="stats">
     <div class="stat-box">
+      <h3>15+</h3>
+      <p>Projetos</p>
+    </div>
+    <div class="stat-box">
+      <h3>8</h3>
+      <p>Games</p>
+    </div>
+    <div class="stat-box">
       <h3>10K+</h3>
-      <p>Members</p>
+      <p>Visualizações</p>
     </div>
     <div class="stat-box">
-      <h3>50+</h3>
-      <p>Groups</p>
+      <h3>5</h3>
+      <p>Awards</p>
     </div>
-    <div class="stat-box">
-      <h3>100+</h3>
-      <p>Servers</p>
-    </div>
-    <div class="stat-box">
-      <h3>20K</h3>
-      <p>Positive Feedback</p>
-    </div>
+  </section>
+
+  <!-- Seções de Projetos e Games -->
+  <section id="projetos" style="padding: 40px; text-align: center;">
+    <h2>Projetos</h2>
+    <p>Aqui você encontrará meus projetos de desenvolvimento de aplicativos e outras criações.</p>
+    <!-- Conteúdo dos projetos -->
+  </section>
+
+  <section id="games" style="padding: 40px; text-align: center;">
+    <h2>Games</h2>
+    <p>Confira alguns dos games que desenvolvi e meus experimentos nessa área.</p>
+    <!-- Conteúdo dos games -->
   </section>
 
   <!-- Rodapé -->
@@ -275,7 +299,7 @@
       <a href="#"><i class="fab fa-linkedin"></i></a>
       <a href="#"><i class="fab fa-github"></i></a>
     </div>
-    <p>&copy; 2025 GamzStream. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Sara Spiegelberg. Todos os direitos reservados.</p>
   </footer>
 
 </body>
